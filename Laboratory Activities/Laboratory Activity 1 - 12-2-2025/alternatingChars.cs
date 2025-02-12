@@ -17,8 +17,18 @@ class AlternatingChars
 
         for (int i = 0; i < size; i++)
         {
-            Console.Write(new string('-', i)); 
-            Console.WriteLine(i % 2 == 0 ? firstChar : secondChar);
+            for (int j = 0; j < i; j++)
+            {
+                Console.Write('-'); 
+            }
+            if (i % 2 == 0) 
+            {
+                Console.WriteLine(firstChar);
+            }
+            else
+            {
+                Console.WriteLine(secondChar);
+            }
         }
     }
 }
